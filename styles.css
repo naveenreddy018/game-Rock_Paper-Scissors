@@ -1,0 +1,128 @@
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #00aaff, #0044ff);
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container: Flexbox for Game Area and History */
+.container {
+    display: flex;
+    gap: 20px;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 900px;
+}
+
+/* Game Area */
+.game-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Player History */
+.history-area {
+    flex: 1;
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.history-area h3 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #00ff00;
+}
+
+.history-area pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #0055ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0044cc;
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/* Images */
+.choice-image {
+    width: 120px; /* Reduced from 200px */
+    height: 120px; /* Reduced from 200px */
+    border-radius: 10px;
+    border: 2px solid white;
+}
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .history-area {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 460px) {
+    button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .choice-image {
+        width: 80px; /* Smaller for mobile */
+        height: 80px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    button {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .choice-image {
+        width: 60px; /* Even smaller for smaller mobile devices */
+        height: 60px;
+    }
+}
